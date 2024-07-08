@@ -59,7 +59,7 @@ function App() {
 
   return (
     <div className='App'>
-      <h2>Реши пример</h2>
+      <h2>Викуля реши пример</h2>
       {`${randomNamber1} + ${randomNamber2} = `}
 
       <input
