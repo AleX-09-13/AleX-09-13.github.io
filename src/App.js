@@ -1,17 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { randomNamber } from './logic';
+import { randomNumber, getRandomOperation } from './logic';
 
 function App() {
-  const initialRandomNamber = randomNamber();
+  const initialRandomNumber1 = randomNumber();
+  const initialRandomNumber2 = randomNumber();
+  const initialRandomOperation = getRandomOperation();
 
   const [answer, setAnswer] = useState('');
-  const [randomNamber1, setRandomNamber1] = useState(initialRandomNamber);
-  const [randomNamber2, setRandomNamber2] = useState(initialRandomNamber);
+  const [randomNumber1, setRandomNumber1] = useState(initialRandomNumber1);
+  const [randomNumber2, setRandomNumber2] = useState(initialRandomNumber2);
+  const [operation, setOperation] = useState(initialRandomOperation);
   const [isCorrect, setIsCorrect] = useState(null);
   const [correctCount, setCorrectCount] = useState(0);
   const [incorrectCount, setIncorrectCount] = useState(0);
 
-  const rightAnswer = randomNamber1 + randomNamber2;
+  const rightAnswer = eval(`${randomNumber1} ${operation} ${randomNumber2}`);
 
   useEffect(() => {
     const correctCountFromStorage = localStorage.getItem('correctCount');
@@ -28,7 +31,7 @@ function App() {
 
   const handleInputChange = (event) => {
     setAnswer(event.target.value);
-    setIsCorrect(event.target.value === rightAnswer.toString());
+    setIsCorrect(event.target.value == rightAnswer);
   };
 
   const handleNewExample = () => {
@@ -42,15 +45,17 @@ function App() {
 
     setAnswer('');
     setIsCorrect(null);
-    setRandomNamber1(randomNamber());
-    setRandomNamber2(randomNamber());
+    setRandomNumber1(randomNumber());
+    setRandomNumber2(randomNumber());
+    setOperation(getRandomOperation());
   };
 
   const handleReset = () => {
     setAnswer('');
     setIsCorrect(null);
-    setRandomNamber1(initialRandomNamber);
-    setRandomNamber2(initialRandomNamber);
+    setRandomNumber1(initialRandomNumber1);
+    setRandomNumber2(initialRandomNumber2);
+    setOperation(initialRandomOperation);
     setCorrectCount(0);
     setIncorrectCount(0);
     localStorage.removeItem('correctCount');
@@ -60,20 +65,12 @@ function App() {
   return (
     <div className='App'>
       <h2>Викуля реши пример</h2>
-      {`${randomNamber1} + ${randomNamber2} = `}
+      {`${randomNumber1} ${operation} ${randomNumber2} = `}
 
       <input
         placeholder='Ваш ответ'
         value={answer}
         onChange={handleInputChange}
-        style={{
-          background:
-            isCorrect === null
-              ? 'white'
-              : isCorrect
-              ? 'rgba(0, 255, 0, 0.5)'
-              : 'rgba(255, 0, 0, 0.1)',
-        }}
       ></input>
 
       <div>
