@@ -1,7 +1,6 @@
 const randomNumber = () => {
   return Math.floor(Math.random() * 40) + 1;
 };
-
 export { randomNumber };
 
 const getRandomOperation = () => {
