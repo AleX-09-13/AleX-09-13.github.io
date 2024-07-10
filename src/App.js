@@ -5,6 +5,7 @@ import MathQuestion from './MathQuestion';
 import ScoreBoard from './ScoreBoard';
 import ButtonNewExample from './ButtonNewExample';
 import ButtonReset from './ButtonReset';
+import Img from './Img';
 
 function App() {
   const initialRandomNumber1 = randomNumber();
@@ -70,15 +71,18 @@ function App() {
   return (
     <div>
       <Header />
-      <MathQuestion
-        randomNumber1={randomNumber1}
-        randomNumber2={randomNumber2}
-        operand={operand}
-        answer={answer}
-        handleInputChange={handleInputChange}
-      />
+      <div style={{ display: 'flex' }}>
+        <MathQuestion
+          randomNumber1={randomNumber1}
+          randomNumber2={randomNumber2}
+          operand={operand}
+          answer={answer}
+          handleInputChange={handleInputChange}
+        />
+        <ButtonNewExample handleNewExample={handleNewExample} />
+      </div>
       <br></br>
-      <ButtonNewExample handleNewExample={handleNewExample} />
+      <Img />
 
       <ScoreBoard correctCount={correctCount} incorrectCount={incorrectCount} />
       <ButtonReset handleReset={handleReset} />

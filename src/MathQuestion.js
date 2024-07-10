@@ -13,7 +13,12 @@ const MathQuestion = ({
         {`${randomNumber1} ${operand} ${randomNumber2} = `}
       </div>
       <input
-        style={{ height: '24px', fontSize: '20px', color: 'blue' }}
+        style={{
+          height: '24px',
+          fontSize: '20px',
+          color: 'blue',
+          width: '100px',
+        }}
         placeholder='Ваш ответ'
         value={answer}
         onChange={handleInputChange}
