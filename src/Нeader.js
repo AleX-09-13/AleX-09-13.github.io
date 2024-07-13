@@ -1,9 +1,10 @@
 import React from 'react';
+import './Header.css';
 
 const Header = () => {
   return (
-    <div style={{ backgroundColor: '#f0f0f0' }}>
-      <h1>Викуля реши примерчик</h1>
+    <div>
+      <h1 className='header-title'>Викуля реши примерчик</h1>
     </div>
   );
 };

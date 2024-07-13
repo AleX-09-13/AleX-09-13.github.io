@@ -6,6 +6,7 @@ import ScoreBoard from './ScoreBoard';
 import ButtonNewExample from './ButtonNewExample';
 import ButtonReset from './ButtonReset';
 import Img from './Img';
+import Calc from './Calculate';
 
 function App() {
   const initialRandomNumber1 = randomNumber();
@@ -20,7 +21,22 @@ function App() {
   const [correctCount, setCorrectCount] = useState(0);
   const [incorrectCount, setIncorrectCount] = useState(0);
 
-  const rightAnswer = eval(`${randomNumber1} ${operand} ${randomNumber2}`);
+  // const rightAnswer = eval(`${randomNumber1} ${operand} ${randomNumber2}`);
+  // const Calc = (num1, operand, num2) => {
+  //   switch (operand) {
+  //     case '+':
+  //       return num1 + num2;
+  //     case '-':
+  //       return num1 - num2;
+  //     case '*':
+  //       return num1 * num2;
+  //     case '/':
+  //       return num1 / num2;
+  //     default:
+  //       return null;
+  //   }
+  // };
+  const rightAnswer = Calc(randomNumber1, operand, randomNumber2);
 
   useEffect(() => {
     const correctCountFromStorage = localStorage.getItem('correctCount');
@@ -37,6 +53,7 @@ function App() {
 
   const handleInputChange = (event) => {
     setAnswer(event.target.value);
+
     setIsCorrect(event.target.value == rightAnswer);
   };
 
