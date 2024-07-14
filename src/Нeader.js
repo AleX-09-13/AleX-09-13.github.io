@@ -1,10 +1,10 @@
 import React from 'react';
-import './Header.css';
+import './Нeader.css';
 
 const Header = () => {
   return (
     <div>
-      <h1 className='header-title'>Викуля реши примерчик</h1>
+      <h1 className='header-title'>Реши примерчик</h1>
     </div>
   );
 };

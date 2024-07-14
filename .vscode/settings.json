@@ -1,0 +1,6 @@
+{
+  "files.refactoring.autoSave": false,
+  "files.autoSaveWorkspaceFilesOnly": true,
+  "files.autoSaveWhenNoErrors": true,
+  "explorer.sortOrder": "mixed"
+}
