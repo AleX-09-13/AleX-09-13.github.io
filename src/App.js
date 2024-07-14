@@ -75,7 +75,9 @@ function App() {
   return (
     <div>
       <Header />
-      <div style={{ display: 'flex' }}>
+      <div style={{ display: 'flex',margin: '5px',padding:'5px'
+        
+       }}>
         <MathQuestion
           randomNumber1={randomNumber1}
           randomNumber2={randomNumber2}
@@ -85,9 +87,7 @@ function App() {
         />
         <ButtonNewExample handleNewExample={handleNewExample} />
       </div>
-      <br></br>
-      <Img />
-
+            <Img />
       <ScoreBoard correctCount={correctCount} incorrectCount={incorrectCount} />
       <ButtonReset handleReset={handleReset} />
     </div>

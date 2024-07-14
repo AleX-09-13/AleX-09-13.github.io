@@ -1,6 +1,11 @@
 .header-title {
   font-family: "Rubik Moonrocks", sans-serif;
-  font-weight: 400;
+  font-weight: 100;
   font-style: normal;
   color: rgb(250, 82, 238);
+  font-size: 31px;
+
+  }
+p {margin: 5px;
+
 }
