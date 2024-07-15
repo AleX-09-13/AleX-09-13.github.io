@@ -1,5 +1,5 @@
 const randomNumber = () => {
-  return Math.floor(Math.random() * 40) + 1;
+  return Math.floor(Math.random() * 200) + 1;
 };
 export { randomNumber };
 

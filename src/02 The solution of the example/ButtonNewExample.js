@@ -6,8 +6,8 @@ const ButtonNewExample = ({ handleNewExample }) => {
       <button
         style={{
           height: '30px',
+          width: '60px',
           color: 'orange',
-          width: '80px',
         }}
         onClick={handleNewExample}
       >

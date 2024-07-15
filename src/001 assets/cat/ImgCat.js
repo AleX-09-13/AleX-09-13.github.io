@@ -1,6 +1,6 @@
 import React from 'react';
 
-import myImg from './assets/cat.jpg';
+import myImg from './cat.jpg';
 
 const Img = () => {
   const myImage = myImg;

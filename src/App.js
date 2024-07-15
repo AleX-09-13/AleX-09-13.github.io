@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { randomNumber, getRandomOperation } from './logic';
-import Header from './Нeader';
-import MathQuestion from './MathQuestion';
-import ScoreBoard from './ScoreBoard';
-import ButtonNewExample from './ButtonNewExample';
-import ButtonReset from './ButtonReset';
-import Img from './Img';
-import Calc from './Calculate';
+import { randomNumber, getRandomOperation } from './02 The solution of the example/RandomNumber';
+import Header from './01 Header/Нeader';
+import MathQuestion from './02 The solution of the example/MathQuestion';
+import ScoreBoard from './03 ScoreBoard/ScoreBoard';
+import ButtonNewExample from './02 The solution of the example/ButtonNewExample';
+import ButtonReset from './04 Reset/ButtonReset';
+import Img from './001 assets/cat/ImgCat';
+import Calc from './02 The solution of the example/Calculate';
 
 
 function App() {
@@ -87,8 +87,9 @@ function App() {
         />
         <ButtonNewExample handleNewExample={handleNewExample} />
       </div>
+      <div style={{display:'flex'}}>
             <Img />
-      <ScoreBoard correctCount={correctCount} incorrectCount={incorrectCount} />
+      <ScoreBoard correctCount={correctCount} incorrectCount={incorrectCount} /></div>
       <ButtonReset handleReset={handleReset} />
     </div>
   );
