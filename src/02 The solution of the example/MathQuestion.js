@@ -19,9 +19,9 @@ const MathQuestion = ({
           height: '24px',
           fontSize: '20px',
           color: 'blue',
-          width: '100px',
+          width: '110px',
         }}
-        placeholder='Ваш ответ'
+        placeholder='Your answer'
         value={answer}
         onChange={handleInputChange}
       />

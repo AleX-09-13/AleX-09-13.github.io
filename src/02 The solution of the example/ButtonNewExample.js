@@ -11,7 +11,7 @@ const ButtonNewExample = ({ handleNewExample }) => {
         }}
         onClick={handleNewExample}
       >
-        Далее-»
+        Enter-»
       </button>
     </div>
   );
